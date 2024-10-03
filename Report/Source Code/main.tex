@@ -1,0 +1,161 @@
+\documentclass[12pt]{report}
+\usepackage{report}
+%%%%%%%%%%% langage
+\usepackage[french]{babel}
+
+%%%%%%%%%%%%ù autres packages
+\usepackage[acronym]{glossaries}
+\usepackage{rotating}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage[justification=centering]{caption}
+\captionsetup[figure]{font=small}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{chngcntr}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{flafter}
+\usepackage{hyperref}
+\usepackage[outputdir=../]{minted}
+\usepackage{lipsum}
+
+%%% Times New Roman font
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+
+%%%%%%%%%%%%%% alphabet 
+\usepackage{lettrine}
+\usepackage{xcolor}
+
+%%%%%%%%%%
+\usepackage{titling}
+\usepackage{mdframed}
+\usepackage{xcolor}
+
+%%%%%%%%%%%%%%%%%%%%% MULTI COL 
+\usepackage{multicol}
+%%%%%%%%%%%%%%%% org
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{graphicx}
+\setstretch{1.5}
+
+
+
+
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+    pdfpagemode=FullScreen,
+}
+\usepackage{lettrine}
+
+
+\setlength{\parindent}{0.6cm}
+
+\setcounter{secnumdepth}{3} % subheadings
+\setlength{\cfttabindent}{0pt} % tableaux
+\setlength{\cftfigindent}{0pt} % figures
+
+% Set this up
+\title{SA}
+\author{am.elmah}
+
+\date{\today}
+\counterwithout{figure}{section}
+\counterwithin{figure}{chapter}
+\counterwithout{table}{section}
+\counterwithin{table}{chapter}
+
+
+
+
+\begin{document}
+
+\addtocontents{toc}{\protect  \hfill \par \bigskip}
+
+%\input{sec/titlepage}
+% Numérotation
+\pagenumbering{roman} % roman 
+% DEDICACE
+\input{project_report/sec/dedicace}
+% REMERCIEMENT
+\input{project_report/sec/remerciement2}
+\input{sec/remerciement}
+
+% RESUME
+\input{sec/resumé}
+% ABSTRACT
+\input{project_report/sec/abstract}
+
+{
+
+% coleur
+\hypersetup{linkcolor=black}
+
+\begin{center}
+  
+  \setlength{\parskip}{0em}
+  \renewcommand\contentsname{TABLE DES MATIÈRES} % Change le texte du titre de la table des matières
+  \tableofcontents
+\end{center}
+
+% List des figures 
+
+\newpage
+\listoffigures 
+\addcontentsline{toc}{section}{LISTE DES FIGURES}
+% List des tableaux
+
+\newpage
+\listoftables 
+\addcontentsline{toc}{section}{LISTE DES TABLEAUX}
+}
+% List des abbreviations
+\input{project_report/sec/list_des_abbrev}
+
+
+% Intro 
+\input{project_report/sec/introduction_generale}
+
+\newpage
+
+\input{sec/chapitre1}
+\input{sec/chapitre2}
+\input{sec/chapitre3}
+\input{sec/chapitre4}
+\input{project_report/sec/conclusionn}
+\input{sec/references}
+
+\newpage
+\appendix
+\addtocounter{chapter}{1}
+
+%%%%%%%%%%%%%%%%%%%% BIBLIO 
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+
+\nocite{* BIBIOGRAPHY}
+\renewcommand{\bibname}{REFERENCES}
+\bibliographystyle{IEEEtran}
+\bibliography{biblio}
+\printbibligraphy
+\end{document}

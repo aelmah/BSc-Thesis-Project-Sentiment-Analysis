@@ -1,0 +1,81 @@
+\ProvidesPackage{report}
+
+% Geometry
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=1.25in, right=1.25in, top=1in, bottom=1in
+}
+
+
+% paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.1em}
+\setcounter{secnumdepth}{5}
+
+% Math outils
+\usepackage{mathtools}
+
+
+% Fonts
+\usepackage{mathptmx}
+\usepackage{fontspec}
+ 
+\setmainfont{Times New Roman}
+
+% font size spécialisé
+\makeatletter %only needed in preamble
+\renewcommand\large{\@setfontsize\large{14pt}{18}}
+\renewcommand\Large{\@setfontsize\Large{18pt}{22}}
+\renewcommand\LARGE{\@setfontsize\LARGE{20pt}{24}}
+\makeatother
+
+\usepackage[onehalfspacing]{setspace}
+
+% PDF
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+
+\usepackage[titles]{tocloft}
+
+%  Padding- Table des matières
+\renewcommand\cftchappresnum{CHAPITRE }
+\cftsetindents{chap}{0pt}{3cm}
+\cftsetindents{sec}{0pt}{2.5em}
+\cftsetindents{subsec}{2.5em}{2.75em}
+
+
+% Section avant/après espace
+\usepackage[explicit]{titlesec}
+
+\titleformat{\chapter}[display]{\large\centering \chaptermark{#1 \thechapter}\bfseries}{\MakeUppercase \chaptername\ \thechapter}{-0.5em}{#1}%
+\titleformat{name=\chapter, numberless}[block]{\bfseries\large\centering}{}{0ex}{\MakeUppercase#1}
+
+\titlespacing*{\chapter}{0pt}{-3.5ex plus -1ex minus -.2ex}{2.3ex plus.2ex}
+
+\titlespacing{\section}{0pt}{0em plus 2pt minus 0pt}{-0.5em plus 2pt minus 2pt}
+\titlespacing{\subsection}{0pt}{0em plus 2pt minus 0pt}{-0.5em plus 2pt minus 2pt}
+\titlespacing{\paragraph}{0pt}{-0.5em}{-0.5em plus 2pt minus 2pt}
+
+
+\titleformat{\section}{\bfseries\normalsize\MakeUppercase}{\thesection}{1em}{#1}
+\titleformat{\subsection}{\bfseries\normalsize}{\thesubsection}{1em}{#1}
+\titleformat{\subsubsection}{\bfseries\normalsize}{\thesubsubsection}{1em}{#1}
+% \titleformat{\paragraph}[hang]{\bfseries\normalsize}{\paragraph.}{1em}{}
+
+
+
+% espace avant/après equations 
+\AtBeginDocument{
+  \setlength\abovedisplayskip{1em plus 2pt minus 2 pt}
+  \setlength\belowdisplayskip{1em plus 2pt minus 2 pt}
+  \setlength\abovedisplayshortskip{0.5em plus 2pt minus 2 pt}
+  \setlength\belowdisplayshortskip{0.5em plus 2pt minus 2 pt}
+}
+
+% Float numbering
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+\counterwithin{equation}{section}
