@@ -1,0 +1,80 @@
+% page de garde (Design)
+\newgeometry{
+    top=0cm,
+    bottom=1cm,
+    left=3cm,
+    right=3cm,
+    headsep=0cm, % espace entre l'entete et le contenue
+    headheight=2cm % Height of the header
+}
+
+\thispagestyle{empty} % pour supprimer la numérotation de la page da garde
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+\makeatletter
+
+% First title page
+
+
+\begin{titlepage}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \draw [blue, line width=2.5pt] 
+        ($(current page.north west) + (0.5cm,-0.5cm)$) rectangle 
+        ($(current page.south east) + (-0.5cm,0.5cm)$);
+\end{tikzpicture}
+
+\begin{center}
+{\small \textbf{UNIVERSITE ABDELMALEK ESSAADI}\\
+\textbf{FACULTE DES SCIENCES ET TECHNIQUES D’AL-HOCEIMA}\\
+\textbf{DÉPARTEMENT D’INFORMATIQUE}\\
+\textbf{Année universitaire 2023-2024}\\}
+\end{center}
+
+
+\hrule
+\vspace{0.09cm}
+
+\begin{flushright}
+N° d’ordre : 2024/0021
+\end{flushright}\\
+\begin{center}
+{\LARGE \textbf{RAPPORT}\\[0.2cm]}
+{\Large \textbf{De Projet de Fin d'Études}}\\[1.5cm]
+
+{\large \textbf{Présenté en vue de l'obtention de}}\\[0.3cm]
+{\Large \textbf{LICENCE SCIENCES ET TECHNIQUES}}\\[0.3cm]
+{\large \textbf{Spécialité : Ingénierie de données et développement logiciel}.}\\[1.5cm]
+
+{\large \textbf{Par} :}\\[0.5cm]
+
+    \begin{tabbing}
+        \hspace{4cm} \= \kill
+        • \textbf{EL MAHRAOUI Amal}   \\
+        • \textbf{BOUKOULLA Ouissal} \\
+    \end{tabbing}
+
+
+
+{\Large \textbf{\textit{Titre:}}}\\[0.5cm]
+{\textbf{\Large{\textcolor{blue}{Analyse des sentiments des tweets}}}}\\[2.5cm]
+
+{\large \textbf{Soutenu le x juin 2024 devant le jury composé de :}}
+
+\begin{tabbing}
+    • \textbf{Pr. SOUFI Adil}. \hspace{4cm} \= \textbf{Président et rapporteur}\\
+    
+    • \textbf{Pr. SRAI Aziz} \> \textbf{Examinateur}
+    • \textbf{Pr. ZANNOU Abderrahim} \> \textbf{Encadrant} \\
+    • \textbf{Mme.BOUAROUROU Soukaina} \> \textbf{Co-Encadrante} \\
+\end{tabbing}
+
+\end{center}
+\end{titlepage}
+\restoregeometry
+
+
+
+

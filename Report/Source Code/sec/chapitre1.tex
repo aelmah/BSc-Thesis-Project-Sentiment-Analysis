@@ -1,0 +1,144 @@
+\newpage
+\pagenumbering{arabic}
+\chapter{PRÉSENTATION ET CADRAGE DU PROJET}
+
+
+% \clearpage
+
+
+
+
+
+\textbf{Introduction} \par
+Ce chapitre a pour objectif de définir le cadre général du projet en présentant la problématique à résoudre et la solution proposée. Nous y aborderons également les besoins fonctionnels et non fonctionnels de l'application, en établissant les fondations nécessaires pour une mise en œuvre réussie et cohérente de notre initiative.
+
+
+
+
+
+\section{Présentation du sujet}
+L'analyse des sentiments (SA) est un domaine du traitement automatique du langage naturel (NLP) qui vise à extraire le sentiment intégré dans un texte. La plupart des textes disponibles sont non structurés \cite{salehinejad2018}, ce qui rend difficile pour une machine de détecter la polarité correcte du sentiment. C'est un domaine en pleine croissance qui suscite l'intérêt de plus en plus de chercheurs, principalement en raison des grandes avancées récentes en matière de puissance de calcul, permettant des calculs beaucoup plus complexes et chronophages qui autorisent l'utilisation de modèles neuronaux. Selon \cite{liu2015mining}, la valeur du marché du NLP passera de 3 milliards de dollars américains en 2017 à plus de 43 milliards en 2025.\par
+L'analyse des sentiments est une tâche de classification. Les modèles qui se concentrent sur la polarité utilisent comme classes, par exemple, positif, négatif et neutre. Les modèles qui se concentrent sur les sentiments et les émotions peuvent utiliser des classes comme en colère, heureux, triste, etc. Si la précision de la polarité est importante pour le scénario d'application, il peut être utile d'étendre les catégories pour considérer plus de nuances. Cette approche est appelée analyse des sentiments fine-grained \textit{(fine-grained sentiment analysis)}. 
+De plus, en fonction de l'objectif de l'application, il est possible de définir différents niveaux de granularité \cite{Balaji2017}.  \par L'analyse des sentiments au niveau du document vise à détecter le sentiment du texte dans son ensemble, permettant d'exploiter plus de données mais en généralisant le contenu. Une approche au niveau des entités permet d'identifier les sentiments liés à l'entité qui les provoque. Cela est précieux, par exemple, dans des contextes tels que les avis sur des produits, car le propriétaire du produit peut comprendre quelles sont les faiblesses et les forces du produit lui-même et prendre des mesures correctives pour l'aligner aux attentes des clients. L'analyse au niveau de la phrase se situe entre les deux.
+
+Grâce aux réseaux sociaux, les gens peuvent exprimer leurs pensées et leurs sentiments plus ouvertement que jamais auparavant. Et ils le font. Ils expriment leurs opinions sur un produit, une entreprise, un service, des sujets politiques, la science, des événements, et bien d'autres encore.\par
+
+Pour cette raison, l'analyse des sentiments est extrêmement précieuse pour les entreprises. Elle permet d'identifier le sentiment des clients envers des produits, des marques ou des services dans les conversations en ligne et les retours d'expérience. En écoutant attentivement leurs clients, les entreprises sont en mesure de capter les opinions des consommateurs et de réagir en conséquence, adaptant ainsi un produit ou un service pour répondre à leurs besoins, améliorant ainsi leur proposition de valeur et augmentant la satisfaction des clients.\par
+
+Une analyse des sentiments appropriée peut aider à prédire les performances de vente d'un produit, à valider des décisions stratégiques et marketing, à surveiller une marque, à améliorer le service client et à mener des études de marché. De plus, l'analyse des sentiments peut être efficace pour comprendre comment les communications écrites sont perçues et ainsi améliorer leur ton. Les entreprises peuvent utiliser ce service pour connaître le ton des communications de leurs clients et y répondre de manière appropriée, ou pour comprendre et améliorer leurs conversations avec les clients.\par
+
+Étant donné que l'analyse des sentiments est par nature une activité de classification, après un encodage correct des données, il est possible d'appliquer une multitude de techniques disponibles pour déterminer la classe de sortie. La liberté dans le choix des différentes approches expose à des choix qui doivent être pondérés en fonction de la connaissance des approches elles-mêmes et du jeu de données. Une connaissance approfondie des différentes méthodologies et des résultats qui découlent de leur application est donc fondamentale pour identifier la meilleure approche dans chaque scénario.\par
+
+
+
+\section{Contexte et définition du projet}
+\section{Problématique}
+Il existe actuellement deux méthodes globales pour
+effectuer l'analyse des sentiments. La première, la plus ancienne, forme une approche basée sur la
+création d'un lexique \textit{(lexical based approach)}. Le problème majeur de cette méthode se trouve
+dans le fait que Les lexiques de sentiments sont généralement basés sur des listes de mots associés à des étiquettes de sentiment (positif, négatif, neutre). Cependant, ces mots peuvent avoir des significations différentes en fonction du contexte dans lequel ils sont utilisés, ce que les lexiques ne prennent pas en compte. L'autre méthode, mise en œuvre dans la partie pratique de cette thèse, se base sur
+l'utilisation de corpus \textit{(corpus based approach)} et se voit majoritairement appliquée dans
+l'apprentissage automatique. Cette approche vise à développer des systèmes qui soient capables
+d'attribuer eux-mêmes des classifications à des nouvelles données sans intervention humaine.
+Ensuite, ces systèmes ont généralement recours à une authentification binaire qui indique si les
+données sont soit positives ou négatives. Le but final de ce processus automatique réside dans la
+possibilité de traiter des masses de données importantes rapidement, ce qui offre à l'homme bien
+plus de temps pour s'adonner à d'autres activités. La vraie force de l'apprentissage automatique se
+trouve dans la possibilité de développer des systèmes spécifiques pour certains contextes. 
+\section{Solution proposé et Objectifs}
+Cette étude vise à identifier certains des meilleurs modèles, disponibles à l'heure actuelle, à effectuer l'analyse des sentiments et des émotions  sur les données Twitter et établir une comparaison structurée pour mettre en évidence leurs avantages et inconvénients par rapport à la tâche spécifique de détecter la polarité du Sentiment. L'analyse des sentiments au niveau du document est considéré. Toutefois, étant donné que les tweets sont généralement de nature courte, la plupart d'entre eux sont
+composé d'une seule phrase. Par conséquent, il n'y a pas de différence substantielle entre niveau de phrase et niveau de document dans ce cas d'utilisation spécifique.
+
+\section{Limitations}
+ Limiter la portée dans un tel contexte est quasiment indispensable, puisque des millions de messages sont échangés quotidiennement dans de nombreuses langues sur Twitter et faisant référence à les sujets les plus variés. Seuls les Tweets appartenant aux Sentiment140-MV et Emotions datasets, strictement en anglais, sont donc prises en considération.
+\section{Analyse des besoins}
+\subsection{Les besoins fonctionnels}
+Notre application comporte plusieurs fonctionnalités essentielles pour répondre efficacement aux besoins des utilisateurs :
+\begin{enumerate}
+    \item \textbf{Analyse de texte :} L'application doit être capable de prendre en entrée du texte (par exemple, des avis clients, des tweets, des commentaires) et d'analyser le sentiment et les émotions exprimés.
+    \item \textbf{Classification des émotions :} L'application doit identifier et classer les émotions spécifiques présentes dans le texte, comme la joie, la tristesse, la colère, etc.
+    \item \textbf{Visualisation des résultats :} L'application doit fournir une interface permettant de visualiser les résultats de l'analyse sous forme de graphiques et de rapports.
+    \item \textbf{Exportation des données :} Les résultats de l'analyse doivent pouvoir être exportés dans différents formats (CSV, PDF, etc.).
+\end{enumerate}
+\subsection{Les besoins non fonctionnels}
+En plus des besoins fonctionnels, certains critères non fonctionnels doivent également être pris en considération pour garantir la performance et la qualité de notre application :
+\begin{enumerate}
+    \item \textbf{Performance :} L'application doit être capable de traiter un grand volume de données rapidement et efficacement. 
+    \item \textbf{Précision :} L'application doit atteindre un certain niveau de précision dans l'identification des sentiments et des émotions.
+    \item \textbf{Sécurité :} Les données analysées par l'application doivent être protégées contre tout accès non autorisé.
+    \item \textbf{Scalabilité :} L'application doit être capable de s'adapter à une augmentation du volume de données à analyser sans perte significative de performance.
+\end{enumerate}
+
+
+
+\section{Déroulement du projet}
+\subsection{Tableau des tâches}
+Le tableau des tâches présente de manière synthétique les différentes étapes du projet, avec leur durée et leurs dates de début et de fin. Il permet de visualiser l'avancement global du projet et de s'assurer que toutes les activités sont bien planifiées. Le tableau ci-dessous ([\ref{tab:sentiment_analysis_tasks}]) présente les différentes tâches du projet, avec leur date de début, de fin et leur durée.
+
+%%%%%%%%%%% BEGIN TASKS TABLE %%%%%%%%%%%%
+\begin{table}[h!]
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}m{4cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}|>{\centering\arraybackslash}m{2.5cm}}
+\toprule
+\textbf{Tâches} & \textbf{Début} & \textbf{Fin} & \textbf{Durée (en jours)} \\
+\midrule
+Définition des objectifs et planification & 14/04/2024 & 20/04/2024 & 7 \\
+\midrule
+Collecte et prétraitement des données & 25/04/2024 & 30/04/2024 & 5 \\
+\midrule
+Conception et évaluation des modèles & 01/05/2024 & 15/05/2024 & 15 \\
+\midrule
+Développement de l'application & 15/05/2024 & 31/05/2024 & 17 \\
+\midrule
+Rédaction du rapport & 17/05/2024 & 05/06/2024 & 20 \\
+\midrule
+Présentation PowerPoint & 01/06/2024 & 05/06/2024 & 5 \\
+\bottomrule
+\end{tabular}
+\caption{Tableau des tâches}
+\label{tab:sentiment_analysis_tasks}
+\end{table}
+
+\begin{enumerate}
+    \item \textbf{Définition des objectifs et planification :}
+    Cette phase implique la définition claire des objectifs du projet d'analyse des sentiments et des émotions, ainsi que la planification des différentes étapes à suivre pour atteindre ces objectifs.
+     
+    \item \textbf{Collecte et prétraitement des données :}
+    Durant cette phase, les données nécessaires à l'analyse des sentiments et des émotions sont collectées et prétraitées. Cela comprend souvent le nettoyage des données, la suppression des valeurs aberrantes et la normalisation si nécessaire.\
+    
+    \item \textbf{Développement et évaluation des modèles :}
+    Dans cette étape, les modèles d'analyse des sentiments et des émotions sont développés en utilisant les données prétraitées. Ensuite, ces modèles sont évalués pour déterminer leur performance et leur précision.\
+   
+    \item \textbf{Développement de l'application :}
+     Une fois les modèles d'analyse des sentiments et des émotions développés et évalués, une application est créée pour mettre en œuvre ces modèles dans un contexte pratique. Cette application peut être une interface utilisateur permettant aux utilisateurs de soumettre du texte pour analyse.\
+  
+    \item \textbf{Rédaction du rapport :}
+     Dans cette phase, un rapport détaillé est rédigé pour documenter toutes les étapes du projet d'analyse des sentiments et des émotions, y compris les objectifs, les méthodologies, les résultats et les conclusions.
+    
+    \item \textbf{Présentation PowerPoint :}
+    Enfin, une présentation PowerPoint est préparée pour présenter les résultats du projet d'analyse des sentiments et des émotions de manière concise et visuelle lors de réunions ou de présentations devant un public.\
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%% END OF TASKS TABLE %%%%%%%%%%%
+\subsection{Diagramme de GANTT}
+Le diagramme de Gantt \cite{gantt}, couramment utilisé en gestion de projet, est l'un des outils les plus efficaces pour représenter visuellement l'état d'avancement des différentes activités (tâches) qui constituent un projet. La colonne de gauche du diagramme énumère toutes les tâches à effectuer, tandis que la ligne d'en-tête représente les unités de temps les plus adaptées au projet (jours, semaines, mois etc.). Chaque tâche est matérialisée par une barre horizontale, dont la position et la longueur représentent la date de début, la durée et la date de fin. Ce diagramme permet donc de visualiser d'un seul coup d'œil:
+\begin{itemize}
+    \item Les différentes tâches à envisager
+    \item La date de début et la date de fin de chaque tâche
+    \item La durée escomptée de chaque tâche
+    \item Le chevauchement éventuel des tâches, et la durée de ce chevauchement
+    \item La date de début et la date de fin du projet dans son ensemble
+\end{itemize}
+La figure suivante [\ref{fig:figureGantt}] présente un diagramme de Gantt illustrant la planification temporelle des différentes tâches pour le projet d'analyse des sentiments et des émotions. Chaque barre horizontale représente une tâche spécifique du projet, avec sa durée correspondante et son échéance. Les barres de couleur blanche indiquent les différentes phases du projet, allant de la définition des objectifs à la présentation finale. Ce diagramme permet une visualisation claire et concise de la chronologie du projet et des chevauchements entre les différentes activités.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{project_report/figures/De 14-04-2025 à 05-05-2024.png} 
+    \caption{\textit{Diagramme de GANTT}}
+        \label{fig:figureGantt}
+ 
+\end{figure} \par
+\textbf{Conclusion}\par
+En conclusion, ce chapitre a permis de poser les bases essentielles de notre projet, en clarifiant la problématique et en détaillant la solution envisagée. La description des besoins fonctionnels et non fonctionnels fournit une vision claire des attentes et des exigences, assurant ainsi une direction structurée pour le développement et la réussite de notre application.
+  
+ 
