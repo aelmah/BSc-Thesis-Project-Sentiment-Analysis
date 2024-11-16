@@ -11,7 +11,7 @@ Ce repository contient tout le travail réalisé dans le cadre de mon projet de 
 - **Datasets** :  
   - Détails sur le dataset utilisé pour l'analyse des sentiments.  
   - Le dataset d'émotions est très volumineux, alors un lien vers la source officielle est fourni.
-    > [kaggle](#)
+    > [kaggle](#https://www.kaggle.com/datasets/nelgiriyewithana/emotions)
 
 - **Notebooks** :  
   - Scripts Python utilisant des bibliothèques comme TensorFlow, Keras, Pandas, NumPy, et Seaborn.  
