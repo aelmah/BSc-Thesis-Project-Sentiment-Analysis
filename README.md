@@ -28,6 +28,28 @@ Dans ce projet, nous avons effectué une étude comparative entre plusieurs mod�
 
 
 Nous avons des techniques de Traitement du Langage Naturel (TLN) comme élément clé de l'analyse avec l'apprentissage automatique. Le traitement du langage naturel permet de convertir les mots présents dans le texte en vecteurs mathématiques, nécessaires au bon fonctionnement des modèles d'apprentissage automatique. Une fois ces vecteurs mathématiques générés, ils sont transmis aux modèles d'apprentissage automatique respectifs pour la prédiction. Ces caractéristiques, ainsi que certaines nouvelles fonctionnalités créées, seront utilisées par les modèles d'apprentissage automatique et d'apprentissage profond pour générer des prédictions précises. Cette approche garantit que les modèles reçoivent les informations les plus pertinentes du texte et fournissent les meilleurs résultats possibles.  
+#### Description des Corpus
+* ***Sentiments140-MV***:Le dataset des sentiments également connu sous le nom Sentiment140-MV, est un ensemble de données largement utilisé dans le domaine de l’analyse des sentiments. Il comprend des tweets collectés à partir de Twitter, annotés avec l’étiquette du sentiment correspondant, généralement positif et négatif. Chaque entrée données a les caractéristiques suivantes :
+ 
+— **Ids :** un nombre entier qui représente l’id du tweet ;
+
+— **Date :** le timestamp du tweet ;
+
+— **Flag :** la requête qui a été utilisée pour récupérer le Tweet avec Twitter API. S’il n’y a pas de requête, cette valeur est NO QUERY.
+
+— **Utilisateur :** le nom de l’utilisateur qui a publié le message ;
+
+— **texte :** le contenu réel du tweet.
+<div align="center">
+  <img src="https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/blob/main/Report/Source%20Code/figures/WhatsApp%20Image%202024-06-07%20%C3%A0%2020.42.44_c32b6e6d.jpg" alt="Tokenisation" width="800">
+</div>
+
+* ***Emotions***:  Le dataset Emotions est une collection de messages en anglais provenant de Twitter,minutieusement annotés avec six émotions fondamentales : la colère, la peur, la joie, l’amour, la tristesse et la surprise. Ce dataset constitue une ressource précieuse pour comprendre et analyser le spectre diversifié des émotions exprimées dans les textes courts sur les réseaux sociaux. Chaque entrée dans ce dataset se compose d’un segment de texte représentant un message Twitter et d’une étiquette correspondante indiquant l’émotion prédominante transmise. Les émotions sont classées en six catégories : la tristesse (0), la joie (1), l’amour (2), la colère (3), la peur (4) et la surprise (5).
+
+<div align="center">
+  <img src="https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/blob/main/Report/Source%20Code/figures/repartition-emotion.png" alt="Tokenisation" width="800">
+</div>
+  
 
 #### Prétraitement des Données
 Le prétraitement des données est une étape essentielle dans tout projet d’analyse ou d’apprentissage automatique. Cette phase vise à transformer les données brutes en un format utilisable et cohérent, tout en éliminant les erreurs ou incohérences pouvant nuire à la performance des modèles.
@@ -112,11 +134,67 @@ Lors de la préparation des données, la méthode de division varie en fonction 
 Nous avons essayé les deux méthodes pour la vectorisation des textes : TF-IDF (Term Frequency-Inverse Document Frequency) et CountVectorizer (compteur de mots), afin de comparer leurs performances respectives sur nos modèles. Cependant, dans notre cas, nous n'avons pas observé de différence significative entre les deux approches. Les résultats étaient relativement similaires, ce qui suggère que, pour notre jeu de données spécifique, les deux méthodes produisent des performances équivalentes en termes de précision des modèles.
 > [Trouver les resultats dans ce fichier](https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/tree/main/models%20comparaisons)
 
+### Approches basées sur le Machine Learning et Deep Learning
+
+Dans notre projet, nous avons utilisé une combinaison de modèles de Machine Learning (ML) et de Deep Learning (DL) pour l'analyse de sentiment. Voici un tableau récapitulatif des modèles testés :
+
+| **Approche**         | **Modèles**                                  |
+|----------------------|----------------------------------------------|
+| **Machine Learning**  | Régression Logistique, Naive Bayes (Multinomial, Complémentaire), Adaboost, Nu-SVC |
+| **Deep Learning**     | CNN (Convolutional Neural Network), RNN (Recurrent Neural Network), LSTM (Long Short-Term Memory) |
+
+> [Vous trouvez la description de chaque modèle et sa méthode de fonctionnement ici](https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/tree/main/Report)
+
+### Résultats
+
+<div style="display: flex; justify-content: space-between; gap: 40px;">
+
+  <!-- Tableau 1 : Analyse des Sentiments -->
+  <div>
+    <h3><strong>Analyse des Sentiments</strong></h3>
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 48%; display: inline-block;">
+      <tr>
+        <th>Classificateur</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1-score</th>
+      </tr>
+      <tr><td><strong>Model 1</strong>: RNN_LSTM</td><td>85%</td><td>85%</td><td>85%</td><td>85%</td></tr>
+      <tr><td><strong>Model 2</strong>: MNB</td><td>78%</td><td>82%</td><td>78%</td><td>85%</td></tr>
+      <tr><td><strong>Model 3</strong>: CNB</td><td>85%</td><td>85%</td><td>85%</td><td>-</td></tr>
+      <tr><td><strong>Model 4</strong>: RL</td><td>87%</td><td>88%</td><td>88%</td><td>87%</td></tr>
+      <tr><td><strong>Model 5</strong>: AdaBoost</td><td>80%</td><td>81%</td><td>80%</td><td>81%</td></tr>
+      <tr><td><strong>Model 6</strong>: Nu-SVC</td><td>87%</td><td>88%</td><td>88%</td><td>88%</td></tr>
+    </table>
+  </div>
+
+  <!-- Tableau 2 : Analyse des Émotions -->
+  <div>
+    <h3><strong>Analyse des Émotions</strong></h3>
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 48%; display: inline-block;">
+      <tr>
+        <th>Dataset des émotions</th><th>Accuracy</th><th>Precision</th><th>Recall</th><th>F1-score</th>
+      </tr>
+      <tr><td><strong>Model 1</strong>: RNN_LSTM</td><td>93%</td><td>93%</td><td>93%</td><td>93%</td></tr>
+      <tr><td><strong>Model 2</strong>: MNB</td><td>76%</td><td>80%</td><td>76%</td><td>76%</td></tr>
+      <tr><td><strong>Model 3</strong>: RL</td><td>89%</td><td>89%</td><td>89%</td><td>89%</td></tr>
+      <tr><td><strong>Model 4</strong>: CNB</td><td>88%</td><td>88%</td><td>88%</td><td>88%</td></tr>
+      <tr><td><strong>Model 5</strong>: CNN</td><td>93%</td><td>93%</td><td>93%</td><td>93%</td></tr>
+      <tr><td><strong>Model 6</strong>: AdaBoost</td><td>36%</td><td>24%</td><td>24%</td><td>21%</td></tr>
+    </table>
+  </div>
+
+</div>
+
+
+
 
 
 
      
  
+### Comparison de Performance des modèles 
+> Une comparaison détaillée des performances des modèles pour l'analyse des sentiments et la détection des émotions est disponible [ici](https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/blob/main/models%20comparaisons/interpretation%20des%20mod%C3%A8les.pdf).
+
+### Comparaison of Models Performance
+> A detailed comparison of model performance for sentiment analysis and emotion detection can be found [here](https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/blob/main/models%20comparaisons/interpretation%20des%20mod%C3%A8les.pdf).
 
 
 
