@@ -197,8 +197,22 @@ Dans notre projet, nous avons utilisé une combinaison de modèles de Machine Le
 > A detailed comparison of model performance for sentiment analysis and emotion detection can be found [here](https://github.com/almasstudyjourney/BSc-Thesis-Project-Sentiment-Analysis/blob/main/models%20comparaisons/interpretation%20des%20mod%C3%A8les.pdf).
 
 
+### Notes Importantes
 
+1. Ce fichier README ne contient pas toutes les informations détaillées de notre rapport. Les techniques, les méthodes, et tous les aspects de l'étude comparative sont abordés de manière approfondie dans notre rapport complet.
 
+2. Ce projet est une étude comparative des techniques, des approches et des méthodes utilisées pour l'analyse des sentiments. Nous avons testé plusieurs modèles et évalué leur performance en fonction de différents critères.
+
+3. L'ajout de l'analyse des émotions dans ce projet était une décision conjointe entre ma collègue et moi-même, après avoir obtenu l'approbation de notre professeur.
+
+4. Toutes les techniques d'évaluation des modèles, y compris la validation croisée, sont détaillées dans notre rapport. Ces méthodes ont été appliquées pour assurer la robustesse et la fiabilité de nos résultats.
+
+5. Ce projet a été réalisé en binôme avec **Mlle Ouissal Boukoulla**, avec qui nous avons collaboré sur toutes les étapes de l'étude.
+
+6. - Le **front-end** de l'application a été développé par une autre équipe, et nous avons apporté des modifications et améliorations pour l'adapter à nos besoins spécifiques.  
+   - Le **back-end** a été entièrement développé par nous en utilisant **Django**, une technologie que nous avons choisie pour sa robustesse et sa flexibilité dans la gestion des données.
+
+7. Nous avons ajouté une fonctionnalité permettant à l'utilisateur d'entrer du texte en français. Cette option de traduction permet de traduire les textes en anglais avant  les traiter et les analyser.
     
 
      
