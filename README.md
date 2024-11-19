@@ -207,7 +207,7 @@ Dans notre projet, nous avons utilisé une combinaison de modèles de Machine Le
 
 4. Toutes les techniques d'évaluation des modèles, y compris la validation croisée, sont détaillées dans notre rapport. Ces méthodes ont été appliquées pour assurer la robustesse et la fiabilité de nos résultats.
 
-5. Ce projet a été réalisé en binôme avec **Mlle Ouissal Boukoulla**, avec qui nous avons collaboré sur toutes les étapes de l'étude.
+5. Ce projet a été réalisé en binôme avec **Mlle Ouissal Boukoulla**. 
 
 6. - Le **front-end** de l'application a été développé par une autre équipe, et nous avons apporté des modifications et améliorations pour l'adapter à nos besoins spécifiques.  
    - Le **back-end** a été entièrement développé par nous en utilisant **Django**, une technologie que nous avons choisie pour sa robustesse et sa flexibilité dans la gestion des données.
