@@ -199,11 +199,11 @@ Dans notre projet, nous avons utilisé une combinaison de modèles de Machine Le
 
 ### Notes Importantes
 
-1. Ce fichier README ne contient pas toutes les informations détaillées de notre rapport. Les techniques, les méthodes, et tous les aspects de l'étude comparative sont abordés de manière approfondie dans notre rapport complet.
+1. Ce fichier README ne contient pas toutes les informations détaillées de notre projet. Les techniques, les méthodes, et tous les aspects de l'étude comparative sont abordés de manière approfondie dans notre rapport complet.
 
 2. Ce projet est une étude comparative des techniques, des approches et des méthodes utilisées pour l'analyse des sentiments. Nous avons testé plusieurs modèles et évalué leur performance en fonction de différents critères.
 
-3. L'ajout de l'analyse des émotions dans ce projet était une décision conjointe entre ma collègue et moi-même, après avoir obtenu l'approbation de notre professeur.
+3. L'ajout de la détection des émotions dans ce projet était une décision conjointe entre ma collègue et moi-même, après avoir obtenu l'approbation de notre encadrant.
 
 4. Toutes les techniques d'évaluation des modèles, y compris la validation croisée, sont détaillées dans notre rapport. Ces méthodes ont été appliquées pour assurer la robustesse et la fiabilité de nos résultats.
 
