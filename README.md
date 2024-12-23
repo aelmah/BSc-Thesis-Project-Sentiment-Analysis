@@ -165,7 +165,7 @@ Dans notre projet, nous avons utilisé une combinaison de modèles de Machine Le
     </table>
   </div>
 
-  <!-- Tableau 2 : Analyse des Émotions -->
+  <!-- Tableau 2 : Détection des Émotions -->
   <div>
     <h3><strong>Analyse des Émotions</strong></h3>
     <table border="1" cellpadding="5" cellspacing="0" style="width: 48%; display: inline-block;">
