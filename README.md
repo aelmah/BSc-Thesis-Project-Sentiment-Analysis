@@ -1,4 +1,4 @@
-# Sentiment-Analysis
+# Sentiment-Analysis & Emotion Détection
 <div align="center">
   <img src="https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/06/sentimentanalysishotelgeneric-2048x803-1.jpg" alt="Analyse des Sentiments" width="800">
 </div>
